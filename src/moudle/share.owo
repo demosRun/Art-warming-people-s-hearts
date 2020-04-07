@@ -1,0 +1,28 @@
+<template lang="pug">
+.pac-share-bar#ops_share
+</template>
+
+<style lang="less">
+.pac-share-bar {
+  position: absolute;
+  top: -5px;
+  right: 0;
+  margin: auto;
+  width: 315px;
+  font-size: 22px;
+}
+.ops_tit {
+  float: left;
+}
+.ops_icons {
+  float: left;
+}
+.ops_shareLayer:after, .ops_icons:after {
+  content: "";
+  height: 0;
+  line-height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+</style>

@@ -1,0 +1,64 @@
+<template lang="pug">
+.home
+  //- 分享
+  .share-box
+    plug(_name="share" _src="./src/moudle/share.owo")
+  .panel
+    .top.clear
+      .left.fl
+        plug(_name="video-swiper" _src="https://template.owo.ink/10eac24241e2a377.owo")
+      .right.text-box.fl
+        h2 标题标题标题标题标题标题标题标题标题标题标题标题
+        p &emsp;&emsp;文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文文字文字文字文字文字文字文字文字文字文文字文字文字。
+    plug.w1000(_name="3列图文列表.owo" _src="https://template.owo.ink/aebe30ee62b5cd7f.owo")
+    plug(_name="pagination2" _src="https://template.owo.ink/5312b2c3fed697a2.owo")
+  plug(_name="copyright" _src="https://template.owo.ink/060579f0b4f1bcaa.owo")
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+
+    }
+  }
+</script>
+
+
+<style lang="less">
+.panel {
+  margin: 0 auto;
+  background-color: white;
+  
+  box-shadow: 1px 1px 7px #e8e0e0;
+  padding: 40px;
+  width: 1000px;
+  background-image: url('@|panel-bg.png|')
+}
+.share-box {
+  width: 1080px;
+  height: 45px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 438px;
+}
+.text-box {
+  width: 320px;
+  margin-left: 20px;
+  h2 {
+    line-height: 1.8;
+    font-size: 24px;
+    height: 86px;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 1.7;
+    height: 229px;
+    overflow: hidden;
+  }
+}
+.top {
+  margin-bottom: 40px;
+}
+</style>
