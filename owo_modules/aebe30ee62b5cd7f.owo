@@ -1,17 +1,8 @@
 <template lang="pug">
 ul.card-list.clear
   li(:for="9" o-hover="grow")
-    img(src="http://www.people.com.cn/NMediaFile/2020/0401/MAIN202004010939439835217830074.jpg" width="300" height="220" o-tap="showThis")
-    p 
+    img(src="http://www.people.com.cn/NMediaFile/2020/0401/MAIN202004010939439835217830074.jpg" width="300" height="220")
 </template>
-
-<script>
-  module.exports = {
-    showThis: function (url) {
-      if (this.$target.src) owo.script.bigPictureShow.showImg(this.$target.src)
-    }
-  }
-</script>
 
 <style lang="less">
 :after {

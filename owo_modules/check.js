@@ -10,7 +10,7 @@ screenInfo.isFireFox = /(?:Firefox)/.test(screenInfo.ua),
 screenInfo.isChrome = /(?:Chrome|CriOS)/.test(screenInfo.ua),
 screenInfo.isTablet = /(?:iPad|PlayBook)/.test(screenInfo.ua) || (screenInfo.isAndroid && !/(?:Mobile)/.test(screenInfo.ua)) || (screenInfo.isFireFox && /(?:Tablet)/.test(screenInfo.ua))
 screenInfo.isIPhone = /(?:iPhone)/.test(screenInfo.ua) && !screenInfo.isTablet,
-screenInfo.isPc = !screenInfo.isPhone && !screenInfo.isAndroid && !screenInfo.isSymbian;
+screenInfo.isPc = !screenInfo.isIPhone && !screenInfo.isAndroid && !screenInfo.isSymbian;
 
 if (screenInfo.isPc) {
   document.body.classList.add('pc')

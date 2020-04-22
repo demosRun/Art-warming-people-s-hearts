@@ -3,19 +3,19 @@
     <div class="swiper-wrapper"> 
       <div class="swiper-slide">
         <a href="#" target="_blank">
-          <img src="http://www.people.com.cn/NMediaFile/2019/0620/MAIN201906202020493087485176183.jpg" width="580" height="325" alt="" />
+          <img class="swiper-show" src="http://www.people.com.cn/NMediaFile/2019/0620/MAIN201906202020493087485176183.jpg" width="580" height="325" alt="" />
           <span>中乌“合作—2019”联合反恐演练圆满结束</span>
         </a>
         <div class="video-id">/pvservice/xml/2019/12/4/a58f84cf-49d0-4850-b58d-60b4593c9652.xml</div>
-        <img o-hover="grow" class="play-button" o-tap="playVideo" src="https://cunchu.site/ozzx/resource/play.png">
+        <img o-hover="grow" class="play-button" src="https://cunchu.site/ozzx/resource/play.png">
       </div> 
       <div class="swiper-slide">
         <a href="#" target="_blank">
-          <img src="http://www.people.com.cn/NMediaFile/2019/0620/MAIN201906202025094971392065777.jpg" width="580" height="325" alt="" />
+          <img class="swiper-show" src="http://www.people.com.cn/NMediaFile/2019/0620/MAIN201906202025094971392065777.jpg" width="580" height="325" alt="" />
           <span>远方的母亲，请接受来自军人的祝福</span>
         </a>
-        <div class="video-id">/pvservice/xml/2019/12/4/a58f84cf-49d0-4850-b58d-60b4593c9652.xml</div>
-        <img o-hover="grow" class="play-button" o-tap="playVideo" src="https://cunchu.site/ozzx/resource/play.png">
+        <div class="video-id">/pvservice/xml/2020/4/7/274bc63a-ee0a-4908-a3c1-668e9cc1ac23.xml</div>
+        <img o-hover="grow" class="play-button" src="https://cunchu.site/ozzx/resource/play.png">
       </div> 
     </div>
     <!-- <div class="prev" o-tap="prev"></div> -->
@@ -71,19 +71,23 @@
       const playButtonList = owo.query('.swiper-container-p2 .play-button')
       for (let ind = 0; ind < playButtonList.length; ind++) {
         const element = playButtonList[ind]
-        element.onclick = function () {
+        element.onclick = () => {
           const parentNode = element.parentNode || element.parentElement
           const videoId = parentNode.getElementsByClassName('video-id')
           changeActive(videoId[0].innerHTML)
           setTimeout(() => {
             owo.query('.video-box')[0].style.display = 'block'
+            const video = this.query('.video video')
+            if (video) video.pause()
           }, 0)
         }
         
       }
 
-      owo.query('.close-button')[0].onclick = function () {
+      owo.query('.close-button')[0].onclick = () => {
         owo.query('.video-box')[0].style.display = 'none'
+        const video = this.query('.video video')
+        if (video) video.pause()
       }
     },
     stop: function () {
@@ -115,7 +119,7 @@
   width: 580px;
   height: 100%;
   position: relative;
-  a {
+  a, .swiper-show {
     display: block;
     width: 100%;
     height: 100%;

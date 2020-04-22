@@ -1,5 +1,8 @@
 <template lang="pug">
 .home
+  //- PC头图
+  .main-image-box.no-phone(style="background-image: url(@|bg.jpg|);")
+  img.no-pc.main-image-phone(src="@|bg-phone.jpg|")
   //- 分享
   .share-box
     plug(_name="share" _src="./src/moudle/share.owo")
@@ -10,7 +13,7 @@
       .right.text-box.fl
         h2 标题标题标题标题标题标题标题标题标题标题标题标题
         p &emsp;&emsp;文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文文字文字文字文字文字文字文字文字文字文文字文字文字。
-    plug.w1000(_name="3列图文列表.owo" _src="https://template.owo.ink/aebe30ee62b5cd7f.owo")
+    plug.w1000(_name="3列图文列表" _src="https://template.owo.ink/aebe30ee62b5cd7f.owo")
     plug(_name="pagination2" _src="https://template.owo.ink/5312b2c3fed697a2.owo")
   plug(_name="copyright" _src="https://template.owo.ink/060579f0b4f1bcaa.owo")
 </template>
@@ -18,7 +21,9 @@
 <script>
   module.exports = {
     created: function () {
-
+      const viewer = new Viewer(this.query('.card-list'), {
+        title: false,
+      });
     }
   }
 </script>
@@ -28,7 +33,7 @@
 .panel {
   margin: 0 auto;
   background-color: white;
-  
+  transform: translate3d(0, 0px, 0px);
   box-shadow: 1px 1px 7px #e8e0e0;
   padding: 40px;
   width: 1000px;
@@ -39,7 +44,21 @@
   height: 45px;
   position: relative;
   margin: 0 auto;
-  margin-top: 438px;
+  margin-top: -486px;
+}
+.main-image {
+  user-select: none;
+  pointer-events: none;
+  display: block;
+  margin: 0 auto;
+  width: 1600px;
+}
+.main-image-box {
+  width: 100%;
+  height: 920px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1600px auto;
 }
 .text-box {
   width: 320px;
@@ -60,5 +79,8 @@
 }
 .top {
   margin-bottom: 40px;
+}
+.main-image-phone {
+  width: 100%;
 }
 </style>

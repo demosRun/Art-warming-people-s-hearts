@@ -97,6 +97,10 @@
 		{
 			"name": "check",
 			"src": "./owo_modules/check.js"
+		},
+		{
+			"name": "viewer",
+			"src": "https://cdn.bootcss.com/viewerjs/1.5.0/viewer.min.js"
 		}
 	],
 	"styleList": [
@@ -108,6 +112,10 @@
 		{
 			"name": "swiper.2.0",
 			"src": "http://tools.people.com.cn/libs/swiper/2.0/idangerous.swiper.css"
+		},
+		{
+			"name": "viewer",
+			"src": "https://cdn.bootcss.com/viewerjs/1.5.0/viewer.min.css"
 		}
 	],
 	"pageList": [
